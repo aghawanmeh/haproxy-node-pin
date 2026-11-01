@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "HAProxy Node Pin",
+  "version": "1.0.0",
+  "description": "Pin a browser session to a specific HAProxy backend node and confirm the active route during testing.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "HAProxy Node Pin",
+    "default_popup": "popup.html"
+  }
+}

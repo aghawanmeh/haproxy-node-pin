@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HAProxy Node Pin</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 16px;
+        width: 340px;
+        font-family: Arial, sans-serif;
+        background: #111827;
+        color: #e5e7eb;
+      }
+      h3 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+      }
+      .card {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 8px;
+      }
+      .label {
+        font-size: 11px;
+        color: #9ca3af;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .value {
+        margin-top: 6px;
+        font-size: 14px;
+        word-break: break-word;
+      }
+      button {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 12px;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+      .status {
+        color: #86efac;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>HAProxy Node Pin</h3>
+
+    <div class="card">
+      <div class="label">Current node</div>
+      <div id="node" class="value">Loading...</div>
+    </div>
+
+    <div class="card">
+      <div class="label">Sticky cookie</div>
+      <div id="cookie" class="value">No cookie found</div>
+    </div>
+
+    <div class="card">
+      <div class="label">Status</div>
+      <div id="status" class="value status">Checking...</div>
+    </div>
+
+    <button id="refreshBtn">Refresh</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
