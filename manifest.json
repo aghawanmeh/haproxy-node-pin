@@ -3,7 +3,7 @@
   "name": "HAProxy Node Pin",
   "version": "1.0.0",
   "description": "Pin a browser session to a specific HAProxy backend node and confirm the active route during testing.",
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "cookies"],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
